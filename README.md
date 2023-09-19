@@ -22,7 +22,8 @@ Sanity checking:
 
 #### Important dates: 
 
-|Date | Action item |
+| Date | Action item |
+| - | - |
 | Sept 22 | Projects are released, team introductions, familiarize with the Git |
 | Sept 23 | Main Hackathon Day |
 | Sept 24 | Wrap-up, judging, awards, and networking event |
