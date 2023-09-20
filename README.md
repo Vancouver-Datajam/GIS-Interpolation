@@ -3,6 +3,12 @@
 ## Project statement
 The aim of this project is to harness the power of data analysis and geospatial techniques to provide accurate visualizations and predictions of climatic conditions across various regions of British Columbia (BC). By employing Kriging interpolation on a carefully curated point dataset, we seek to create a detailed representation of BC's climate patterns. Additionally, we will develop an interactive geospatial dashboard using Plotly, enabling users to explore and understand the climatic variations in an intuitive and informative manner.
 
+## Project team members
+
+- Team lead: Evie Lapalme
+- Mentor: Sasha
+- Team:
+
 ### Key Tasks
 - **Kriging Interpolation**: Implement the Kriging interpolation method to estimate climate values at unobserved locations.
 Evaluate and fine-tune the interpolation model for optimal results.
@@ -13,30 +19,31 @@ Provide insights and context for interpreting the climatic patterns observed.
 - **Prediction and Analysis**: Enable users to input coordinates or select locations on the dashboard to receive predicted climate values.
 Offer insights into how the climate varies across different regions of British Columbia.
 
-### Deliverables:
+### Deliverables
 - A well-documented Python codebase that encompasses the entire data analysis process, from data acquisition to dashboard development.
 - An interactive geospatial dashboard powered by Plotly, providing easy access to climate information for different regions of BC.
 - Documentation detailing the methodology, code structure, and instructions for running the project.
 
+### Skills
+- **Geospatial Data Analysis Techniques**: Participants will gain hands-on experience in working with geospatial data, including data preprocessing, Kriging interpolation, and mapping.
+- **Interactive Dashboard Development**: Participants will learn how to create dynamic and interactive geospatial dashboards using Plotly, enhancing their data visualization skills.
+- **Spatial Data Interpretation**: This project will provide insights into how to interpret and visualize spatial data, allowing participants to understand climatic patterns at a regional level.
+- **Application of Geostatistical Methods**: Participants will learn how to apply Kriging interpolation, a powerful geostatistical technique widely used in spatial analysis and prediction.
+- **Collaboration and Communication**: Working as a team, participants will develop their skills in collaboration, communication, and sharing knowledge in a group setting.
+- **Project Documentation**: Participants will gain experience in documenting their code, methodology, and results, which is essential for reproducibility and sharing findings.
+
 ### Conclusion
 This project presents an exciting opportunity to combine advanced data analysis techniques with geospatial visualization, offering a valuable resource for understanding and predicting climate patterns in British Columbia. Through this endeavor, we aim to contribute to a better-informed understanding of the climatic conditions in this diverse and ecologically significant region.
 
-## Project team members
 
-- Team lead: Evie Lapalme
-- Mentor: Sasha
-- Documentation:
-- Scripting:
-- Modelling:
-- Sanity checking: 
 
-## Skills Participants Practice
-- Geospatial Data Analysis Techniques: Participants will gain hands-on experience in working with geospatial data, including data preprocessing, Kriging interpolation, and mapping.
-- Interactive Dashboard Development: Participants will learn how to create dynamic and interactive geospatial dashboards using Plotly, enhancing their data visualization skills.
-- Spatial Data Interpretation: This project will provide insights into how to interpret and visualize spatial data, allowing participants to understand climatic patterns at a regional level.
-- Application of Geostatistical Methods: Participants will learn how to apply Kriging interpolation, a powerful geostatistical technique widely used in spatial analysis and prediction.
-- Collaboration and Communication: Working as a team, participants will develop their skills in collaboration, communication, and sharing knowledge in a group setting.
-- Project Documentation: Participants will gain experience in documenting their code, methodology, and results, which is essential for reproducibility and sharing findings.
+## Description of Dataset
+The dataset from <https://climatebc.ca/> is a comprehensive collection of climate data specifically focused on the province of British Columbia (BC), Canada. It provides a wide range of climate information and analyses tailored to the unique geographical and environmental characteristics of BC. The dataset includes historical climate data, which can be crucial for understanding long-term climate trends, variability, and patterns in British Columbia. Additionally, it may contain model-based projections and forecasts, offering insights into future climate scenarios for the province.
+
+### Scope
+- Temperature
+- Precipitation
+- Decade Averages from 2011-2021
 
 ## Vancouver Datajam 2023 Schedule:
 
