@@ -1,13 +1,12 @@
 # Visualization & Prediction of Geospatial BC Climates
 
-## Project statement
-The aim of this project is to harness the power of data analysis and geospatial techniques to provide accurate visualizations and predictions of climatic conditions across various regions of British Columbia (BC). By employing Kriging interpolation on a carefully curated point dataset, we seek to create a detailed representation of BC's climate patterns. Additionally, we will develop an interactive geospatial dashboard using Plotly, enabling users to explore and understand the climatic variations in an intuitive and informative manner.
-
 ## Project team members
-
 - Team lead: Evie Lapalme
 - Mentor: Sasha
 - Team:
+
+## Project statement
+The aim of this project is to harness the power of data analysis and geospatial techniques to provide accurate visualizations and predictions of climatic conditions across various regions of British Columbia (BC). By employing Kriging interpolation on a carefully curated point dataset, we seek to create a detailed representation of BC's climate patterns. Additionally, we will develop an interactive geospatial dashboard using Plotly, enabling users to explore and understand the climatic variations in an intuitive and informative manner.
 
 ### Key Tasks
 - **Kriging Interpolation**: Implement the Kriging interpolation method to estimate climate values at unobserved locations.
@@ -35,8 +34,6 @@ Offer insights into how the climate varies across different regions of British C
 ### Conclusion
 This project presents an exciting opportunity to combine advanced data analysis techniques with geospatial visualization, offering a valuable resource for understanding and predicting climate patterns in British Columbia. Through this endeavor, we aim to contribute to a better-informed understanding of the climatic conditions in this diverse and ecologically significant region.
 
-
-
 ## Description of Dataset
 The dataset from <https://climatebc.ca/> is a comprehensive collection of climate data specifically focused on the province of British Columbia (BC), Canada. It provides a wide range of climate information and analyses tailored to the unique geographical and environmental characteristics of BC. The dataset includes historical climate data, which can be crucial for understanding long-term climate trends, variability, and patterns in British Columbia. Additionally, it may contain model-based projections and forecasts, offering insights into future climate scenarios for the province.
 
@@ -46,8 +43,7 @@ The dataset from <https://climatebc.ca/> is a comprehensive collection of climat
 - Decade Averages from 2011-2021
 
 ## Vancouver Datajam 2023 Schedule:
-
-### Main page: https://vancouverdatajam.ca/
+- Main page: <https://vancouverdatajam.ca/>
 
 #### Important dates: 
 
