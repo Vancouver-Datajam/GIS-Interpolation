@@ -42,16 +42,16 @@ usage
 #### Considerations:
 
 1. **Data Preprocessing:**
-   - Depending on the nature of your data, additional preprocessing steps (e.g., outlier detection, missing value imputation) may be required before performing Kriging.
+   - additional preprocessing steps (e.g., outlier detection, missing value imputation) may be required before performing Kriging.
 
 2. **Spatial Grid Resolution:**
-   - The grid resolution (`grid_x` and `grid_y`) used for Kriging can impact the accuracy and granularity of the interpolated results. Adjust this based on your specific requirements.
+   - The grid resolution used for Kriging can impact the accuracy and granularity of the interpolated results. Adjust this based on your specific requirements.
 
 3. **Kriging Parameters:**
    - The Kriging model's parameters (e.g., variogram model, nugget, sill, range) may need to be fine-tuned to optimize the interpolation results for your dataset.
 
 4. **Visualization Customization:**
-   - The Plotly visualization can be customized further to enhance clarity and aesthetics, including labels, color scales, and additional annotations.
+   - The Plotly visualization can be customized to enhance clarity and aesthetics, including labels, color scales, and additional annotations.
 
 5. **Documentation and Comments:**
    - Comprehensive comments and documentation are crucial for understanding and maintaining the script over time. Include explanations for key steps and parameter choices.
