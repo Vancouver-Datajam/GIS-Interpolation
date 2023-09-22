@@ -39,9 +39,6 @@ usage
 
 4. **Data Validation**
 
-5. **Fixed Variogram Model:**
-   - The script uses a linear variogram model for Kriging interpolation. Depending on the dataset and spatial patterns, a different variogram model might be more appropriate.
-
 #### Considerations:
 
 1. **Data Preprocessing:**
