@@ -62,11 +62,11 @@ app.layout = html.Div([
             {'label': 'Temp Average - Spring', 'value': 'Tave_sp'},
             {'label': 'Temp Average - Summer', 'value': 'Tave_sm'},
             {'label': 'Temp Average - Fall', 'value': 'Tave_at'},
-            # percip
-            {'label': 'Precipitation - Winter', 'value': 'PPT_wt'},
-            {'label': 'Precipitation - Spring', 'value': 'PPT_sp'},
-            {'label': 'Precipitation - Summer', 'value': 'PPT_sm'},
-            {'label': 'Precipitation - Fall', 'value': 'PPT_at'},
+            # # precip
+            # {'label': 'Precipitation - Winter', 'value': 'PPT_wt'},
+            # {'label': 'Precipitation - Spring', 'value': 'PPT_sp'},
+            # {'label': 'Precipitation - Summer', 'value': 'PPT_sm'},
+            # {'label': 'Precipitation - Fall', 'value': 'PPT_at'},
           ],
           multi=False,
           value="Tmax_wt",
@@ -101,7 +101,7 @@ app.layout = html.Div([
         ], style={'border': '1px solid #eaeaea', 'flex': 1, 'boxShadow': '0px 4px 6px 0px #c0c0c0', 'background': '#fff'}),
         html.Div([    
           # Geospatial map
-          html.H3("C02", style={'textAlign': 'center', 'margin': '8px 0px', 'background': '#fff'}),
+          html.H3("Precipitation", style={'textAlign': 'center', 'margin': '8px 0px', 'background': '#fff'}),
           dcc.Graph(
               id='geo-map-2',
               style={'flex': 1}
@@ -127,6 +127,8 @@ app.layout = html.Div([
 def update_map(variogram, time_period, target_variable):
     # consider 2011-2020 data first
 
+    precip_variable = 'PPT_%s' %(target_variable.split("_")[1])
+
     url_list = [
     # "https://testground.s3.ap-southeast-1.amazonaws.com/3537ea83-529f-471b-92ef-bef6095bb850/1961-1990.csv",
     # "https://testground.s3.ap-southeast-1.amazonaws.com/3537ea83-529f-471b-92ef-bef6095bb850/1991-2000.csv",
@@ -146,6 +148,7 @@ def update_map(variogram, time_period, target_variable):
 
     X = df[['Latitude', 'Longitude']]  # Features: coordinates
     y = df[target_variable]  # Target variable: temp average during winter
+    y_precip = df[precip_variable]
 
     # Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=123)
@@ -154,7 +157,7 @@ def update_map(variogram, time_period, target_variable):
     gridx = np.arange(df.Latitude.min(), df.Latitude.max(), resolution)
     gridy = np.arange(df.Longitude.min(), df.Longitude.max(), resolution)
 
-    OK = OrdinaryKriging(
+    OK_temp = OrdinaryKriging(
         df['Latitude'],
         df['Longitude'],
         df[target_variable],
@@ -163,7 +166,18 @@ def update_map(variogram, time_period, target_variable):
         enable_plotting=False
     )
 
-    z, ss = OK.execute("grid", gridx, gridy)
+    OK_precip = OrdinaryKriging(
+        df['Latitude'],
+        df['Longitude'],
+        df[precip_variable],
+        variogram_model=variogram,# "spherical" "linear" "gaussian" "power" "exponential"
+        # verbose=True,
+        enable_plotting=False
+    )
+
+    z_temp, ss = OK_temp.execute("grid", gridx, gridy)
+    z_precip, ss = OK_precip.execute("grid", gridx, gridy)
+
 
       # kt.write_asc_grid(gridx, gridy, z, filename="output.asc")
       # plt.imshow(z)
@@ -198,17 +212,31 @@ def update_map(variogram, time_period, target_variable):
 
     train_data.shape
 
-    polygons, values = pixel2poly(gridx, gridy, z, resolution)
-    tave_model = (gpd.GeoDataFrame({target_variable: values}, geometry=polygons, crs="EPSG:3347")
+    temp_polygons, temp_values = pixel2poly(gridx, gridy, z_temp, resolution)
+    precip_polygons, precip_values = pixel2poly(gridx, gridy, z_precip, resolution)
+    tave_model = (gpd.GeoDataFrame({target_variable: temp_values}, geometry=temp_polygons, crs="EPSG:3347")
                       #.to_crs("EPSG:4326")
                       )
-    fig = px.choropleth_mapbox(tave_model, geojson=tave_model.geometry, locations=tave_model.index,
-                              color=target_variable, color_continuous_scale="RdYlGn_r", opacity=0.5,
+    tave_model_precip = (gpd.GeoDataFrame({precip_variable: precip_values}, geometry=precip_polygons, crs="EPSG:3347")
+                      #.to_crs("EPSG:4326")
+                      )
+    
+    temp_labels = {target_variable: 'Temp (C)'}
+    precip_labels = {precip_variable: 'mm (??)'}
+    temp_fig = px.choropleth_mapbox(tave_model, geojson=tave_model.geometry, locations=tave_model.index,
+                              color=target_variable, color_continuous_scale="turbo", opacity=0.5,
                               center={"lat": train_data.Latitude.mean(), "lon": train_data.Longitude.mean()}, zoom=3.5,
-                              mapbox_style="carto-positron")
-    fig.update_layout(margin=dict(l=0, r=0, t=30, b=10))
-    fig.update_traces(marker_line_width=1)
-    return (fig,fig)
+                              mapbox_style="carto-positron", range_color=[-20,30], labels=temp_labels)
+    temp_fig.update_layout(margin=dict(l=0, r=0, t=30, b=10))
+    temp_fig.update_traces(marker_line_width=1)
+
+    precip_fig = px.choropleth_mapbox(tave_model_precip, geojson=tave_model.geometry, locations=tave_model.index,
+                              color=precip_variable, color_continuous_scale="turbo", opacity=0.5,
+                              center={"lat": train_data.Latitude.mean(), "lon": train_data.Longitude.mean()}, zoom=3.5,
+                              mapbox_style="carto-positron", range_color=[50,1750], labels=precip_labels)
+    precip_fig.update_layout(margin=dict(l=0, r=0, t=30, b=10))
+    precip_fig.update_traces(marker_line_width=1)
+    return (temp_fig,precip_fig)
 
 # Step 9: Run the app
 if __name__ == '__main__':
