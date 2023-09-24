@@ -10,6 +10,9 @@
 ## Project statement
 The aim of this project is to harness the power of data analysis and geospatial techniques to provide accurate visualizations and predictions of climatic conditions across various regions of British Columbia (BC). By employing Kriging interpolation on a carefully curated point dataset, we seek to create a detailed representation of BC's climate patterns. Additionally, we will develop an interactive geospatial dashboard using Plotly, enabling users to explore and understand the climatic variations in an intuitive and informative manner.
 
+## Presentation
+<https://docs.google.com/presentation/d/1uANv49etGWTlsa_tTqWVVDsW2Qh0-beMJwqWW1JWYPg/edit#slide=id.g226d46bec69_0_27>
+
 ### Key Tasks
 - **Kriging Interpolation**
 - **Geospatial Dashboard Development**
