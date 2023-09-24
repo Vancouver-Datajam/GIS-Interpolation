@@ -3,25 +3,42 @@
 ## Project team members
 - Team lead: Evie Lapalme
 - Mentor: Sasha
-- Team:
+- Documentation: Art, Ashley, Emilia
+- Code Writing: Chloe, Caesar, Thomas, Art, Kelvin, Cecilia, Ashley, Melissa
+- Code Review: Chloe, Caesar, Thomas, Art, Kelvin, Ashley, Melissa, Yiquan, Cecilia
 
 ## Project statement
 The aim of this project is to harness the power of data analysis and geospatial techniques to provide accurate visualizations and predictions of climatic conditions across various regions of British Columbia (BC). By employing Kriging interpolation on a carefully curated point dataset, we seek to create a detailed representation of BC's climate patterns. Additionally, we will develop an interactive geospatial dashboard using Plotly, enabling users to explore and understand the climatic variations in an intuitive and informative manner.
 
 ### Key Tasks
-- **Kriging Interpolation**: Implement the Kriging interpolation method to estimate climate values at unobserved locations.
-Evaluate and fine-tune the interpolation model for optimal results.
-- **Geospatial Dashboard Development**: Utilize Python and Plotly to create an interactive geospatial dashboard.
-Incorporate visual elements like maps, charts, and filters for a user-friendly experience.
-- **Visualization and Interpretation**: Present the interpolated climate data through visually appealing and informative plots and maps.
-Provide insights and context for interpreting the climatic patterns observed.
-- **Prediction and Analysis**: Enable users to input coordinates or select locations on the dashboard to receive predicted climate values.
-Offer insights into how the climate varies across different regions of British Columbia.
+- **Kriging Interpolation**
+- **Geospatial Dashboard Development**
+- **Visualization and Interpretation**
+- **Prediction and Analysis**
 
 ### Deliverables
 - A well-documented Python codebase that encompasses the entire data analysis process, from data acquisition to dashboard development.
 - An interactive geospatial dashboard powered by Plotly, providing easy access to climate information for different regions of BC.
-- Documentation detailing the methodology, code structure, and instructions for running the project.
+
+### What we accomplished
+Kriging Interpolation:
+- Implement the Kriging interpolation method to estimate climate values at unobserved locations.
+
+Model Evaluation:
+- The range of our data is -16.8 to 5.5 Celsius. Given that  standard deviation is 5.33 and our errors are below this, this suggests that the model’s predictions are indeed closer to the actual values than the spread of the data!
+- an R² score of 0.858 means that approximately 85.8% of the variability in the target variable (temperature in this case) can be explained by the model.
+
+Interactive Dashboard:
+- Present the interpolated climate data through visually appealing and informative plots and maps.
+Provide insights and context for interpreting the climatic patterns observed.
+- Incorporating visual elements like maps, charts, and filters for a user-friendly experience.
+- Enable users to input coordinates or select locations on the dashboard to receive predicted climate values.
+Offer insights into how the climate varies across different regions of British Columbia.
+
+### Why is this significant
+Risk management and mitigation planning
+- Geospatial interpolation is more important now than ever with climate change events worsening. This year we saw events like the fires in Hawaii due to poor disaster prevention and management - Moody’s RMS (Risk Management Solutions company) estimated up to $6 billion in economic losses from the devastating wildfires in Hawaii, which killed at least 115 people and destroyed countless homes and businesses. Geospatial interpolation would play a huge role in risk management and mitigation planning: By providing detailed spatial information on climate variables such as temperature (and more) geospatial interpolation supports risk assessment for extreme weather events, sea-level rise, and other climate-related hazards. This information is vital for designing mitigation and adaptation strategies, infrastructure planning, and disaster management. It could save lives and save billions in economic losses. 
+
 
 ### Skills
 - **Geospatial Data Analysis Techniques**: Participants will gain hands-on experience in working with geospatial data, including data preprocessing, Kriging interpolation, and mapping.
