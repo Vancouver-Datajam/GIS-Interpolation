@@ -1,0 +1,146 @@
+﻿label,value,lat,lng,population,density
+Vancouver,Vancouver,49.25,-123.1,2426160,5749.9
+Surrey,Surrey,49.19,-122.8489,568322,1797.9
+Victoria,Victoria,48.4283,-123.3647,363222,4722.3
+Burnaby,Burnaby,49.2667,-122.9667,249125,2750.7
+Richmond,Richmond,49.1667,-123.1333,209937,1629
+Kelowna,Kelowna,49.8881,-119.4956,181380,682.4
+Abbotsford,Abbotsford,49.05,-122.3167,153524,409
+Coquitlam,Coquitlam,49.2839,-122.7919,148625,1216.7
+Saanich,Saanich,48.484,-123.381,117735,1136.6
+White Rock,White Rock,49.025,-122.8028,109167,4240.6
+Delta,Delta,49.0847,-123.0586,108455,603.7
+Nanaimo,Nanaimo,49.1642,-123.9364,106079,1104.1
+Kamloops,Kamloops,50.6761,-120.3408,97902,328.6
+Chilliwack,Chilliwack,49.1577,-121.9509,93203,356.6
+Maple Ridge,Maple Ridge,49.2167,-122.6,90990,339.7
+New Westminster,New Westminster,49.2069,-122.9111,78916,5052.4
+Prince George,Prince George,53.9169,-122.7494,76708,242.2
+Port Coquitlam,Port Coquitlam,49.2625,-122.7811,61498,2108.7
+North Vancouver,North Vancouver,49.32019672,-123.0699402,58120,4913
+Vernon,Vernon,50.267,-119.272,51896,461.7
+Courtenay,Courtenay,49.6878,-124.9944,48917,876.7
+Langford Station,Langford Station,48.4506,-123.5058,46584,1124.4
+West Vancouver,West Vancouver,49.3667,-123.1667,44122,506.1
+Mission,Mission,49.1337,-122.3112,41519,182.9
+Campbell River,Campbell River,50.0244,-125.2475,38108,246
+Penticton,Penticton,49.4911,-119.5886,36893,857.3
+East Kelowna,East Kelowna,49.8625,-119.5833,36078,295.5
+Port Moody,Port Moody,49.2831,-122.8317,33535,1297.3
+North Cowichan,North Cowichan,48.8236,-123.7192,31990,163.7
+Langley,Langley,49.09869081,-122.6597287,28963,2845.2
+Parksville,Parksville,49.315,-124.312,27330,939.5
+Duncan,Duncan,48.7787,-123.7079,24358,2444.5
+Squamish,Squamish,49.7017,-123.1589,23819,227.5
+Port Alberni,Port Alberni,49.2339,-124.805,21711,928.9
+Fort St. John,Fort St. John,56.2465,-120.8476,21465,656.9
+Cranbrook,Cranbrook,49.5097,-115.7667,20499,641.2
+Salmon Arm,Salmon Arm,50.7022,-119.2722,19432,125.2
+Pitt Meadows,Pitt Meadows,49.2333,-122.6833,19146,221.7
+Colwood,Colwood,48.4236,-123.4958,18961,1073.6
+Oak Bay,Oak Bay,48.4264,-123.3228,17990,1710.1
+Esquimalt,Esquimalt,48.4306,-123.4147,17533,2476.7
+Central Saanich,Central Saanich,48.5142,-123.3839,17385,421.9
+Lake Country,Lake Country,50.0833,-119.4142,15817,129.5
+Sooke,Sooke,48.3761,-123.7378,15086,266.6
+Comox,Comox,49.6733,-124.9022,14806,877.7
+Terrace,Terrace,54.5164,-128.5997,14633,209.6
+Powell River,Powell River,49.8353,-124.5247,13943,482.4
+Trail,Trail,49.095,-117.71,12863,472
+Dawson Creek,Dawson Creek,55.7606,-120.2356,12323,461.1
+Sidney,Sidney,48.6506,-123.3986,12318,2412.8
+Prince Rupert,Prince Rupert,54.3122,-130.3271,12300,186.4
+North Saanich,North Saanich,48.6142,-123.42,12235,329.2
+Quesnel,Quesnel,52.9784,-122.4927,12110,279.8
+Williams Lake,Williams Lake,52.1294,-122.1383,11906,330.5
+Whistler,Whistler,50.1208,-122.9544,11854,49.3
+Summerland,Summerland,49.6006,-119.6778,11615,156.8
+View Royal,View Royal,48.4517,-123.4339,11575,807.6
+Nelson,Nelson,49.5,-117.2833,11198,930.6
+Ladysmith,Ladysmith,48.9975,-123.8203,11194,746.5
+Coldstream,Coldstream,50.22,-119.2481,11171,167.8
+Sechelt,Sechelt,49.4742,-123.7542,10200,212.9
+Castlegar,Castlegar,49.3256,-117.6661,10029,408.6
+Gibsons,Gibsons,49.4028,-123.5036,9603,1066
+Qualicum Beach,Qualicum Beach,49.35,-124.4333,9303,517.5
+Kitimat,Kitimat,54,-128.7,8131,34.7
+Kimberley,Kimberley,49.6697,-115.9775,7425,122.5
+Merritt,Merritt,50.1128,-120.7897,7139,273.9
+Kent,Kent,49.2833,-121.75,6300,37.4
+Hope,Hope,49.3858,-121.4419,6181,151
+Peachland,Peachland,49.7736,-119.7369,5789,359.6
+Oliver,Oliver,49.1844,-119.55,5708,896
+Fernie,Fernie,49.5042,-115.0628,5519,388.8
+Creston,Creston,49.09,-116.51,5459,626.8
+Northern Rockies,Northern Rockies,59,-123.75,5393,0.063
+Smithers,Smithers,54.7819,-127.1681,5351,514.9
+Armstrong,Armstrong,50.4483,-119.1961,5323,927.7
+Spallumcheen,Spallumcheen,50.4462,-119.2121,5106,20
+Osoyoos,Osoyoos,49.0325,-119.4661,5085,598.2
+Metchosin,Metchosin,48.3819,-123.5378,5067,72.8
+Westbank,Westbank,49.8423,-119.6743,4491,101.7
+Cumberland,Cumberland,49.6206,-125.0261,4447,153.1
+Vanderhoof,Vanderhoof,54.0143,-124.0089,4439,81
+Bowen Island,Bowen Island,49.3833,-123.3833,4256,84.9
+Grand Forks,Grand Forks,49.0333,-118.44,4166,388.1
+Port Hardy,Port Hardy,50.7225,-127.4928,4132,106.7
+Sparwood,Sparwood,49.7331,-114.8853,3990,19.4
+Rossland,Rossland,49.0786,-117.7992,3729,62.4
+Mackenzie,Mackenzie,55.3381,-123.0944,3714,22.6
+Golden,Golden,51.3019,-116.9667,3708,325
+Fruitvale,Fruitvale,49.09869377,-117.5633821,3557,592
+Invermere,Invermere,50.5083,-116.0303,3391,315.9
+Ellison,Ellison,49.9646,-119.3178,3316,40.6
+Lake Cowichan,Lake Cowichan,48.8258,-124.0542,3226,369.6
+Cedar,Cedar,49.0853,-123.8259,3078,91.3
+Enderby,Enderby,50.5508,-119.1397,3028,695.8
+Houston,Houston,54.3975,-126.6419,2993,41
+Pemberton,Pemberton,50.3203,-122.8053,2970,217.5
+Errington,Errington,49.2874,-124.3433,2907,105.9
+Princeton,Princeton,49.4589,-120.506,2828,47.4
+Cowichan Bay,Cowichan Bay,48.7666,-123.6743,2799,104.5
+Royston,Royston,49.6405,-124.9406,2791,152.4
+Elkford,Elkford,50.0214,-114.9158,2499,24.6
+Highlands,Highlands,48.52,-123.5,2482,65.3
+Sicamous,Sicamous,50.8378,-118.9703,2429,192
+Chase,Chase,50.8189,-119.6844,2399,639.3
+Tumbler Ridge,Tumbler Ridge,55.1333,-121,2389,1.3
+Anmore,Anmore,49.3144,-122.8564,2356,85.6
+Clearwater,Clearwater,51.65,-120.0333,2324,41.7
+Lillooet,Lillooet,50.6864,-121.9364,2321,84.4
+Logan Lake,Logan Lake,50.4911,-120.8153,2255,7
+Port McNeill,Port McNeill,50.5903,-127.0847,2234,149.9
+Tofino,Tofino,49.1275,-125.8852,2217,183.1
+Burns Lake,Burns Lake,54.2292,-125.7625,2117,269.8
+Saltair,Saltair,48.9504,-123.7637,2114,311.7
+Lumby,Lumby,50.2494,-118.9656,2000,379.5
+One Hundred Mile House,One Hundred Mile House,51.6413,-121.3127,1980,37.2
+Ucluelet,Ucluelet,48.9358,-125.5433,1940,264.5
+Chetwynd,Chetwynd,55.6972,-121.6333,1917,181.7
+Harrison Hot Springs,Harrison Hot Springs,49.3,-121.7819,1905,347.3
+Nisga'a,Nisga'a,55.1078,-129.4293,1880,0.9
+Lakeview,Lakeview,49.9026,-119.5699,1847,73.7
+Keremeos,Keremeos,49.2025,-119.8294,1791,717.5
+Warfield,Warfield,49.0953,-117.7344,1753,929.3
+Popkum,Popkum,49.1911,-121.7553,1710,268.2
+Coombs,Coombs,49.3008,-124.4049,1672,107.4
+Naramata,Naramata,49.5886,-119.5838,1628,200.7
+Nakusp,Nakusp,50.2434,-117.8002,1605,195.2
+Fort St. James,Fort St. James,54.4431,-124.2542,1598,72
+Hilliers,Hilliers,49.3022,-124.4727,1590,54.7
+Ashcroft,Ashcroft,50.7256,-121.2806,1558,32.3
+Grindrod,Grindrod,50.63,-119.1314,1526,35.3
+Windermere,Windermere,50.4856,-115.9948,1511,144.7
+Gold River,Gold River,49.7769,-126.0514,1500,15
+Dunsmuir,Dunsmuir,49.3696,-124.5772,1497,70.2
+Barriere,Barriere,51.1803,-120.1261,1391,251.4
+Lions Bay,Lions Bay,49.4581,-123.2369,1390,549
+Telkwa,Telkwa,54.6972,-127.05,1327,191.9
+Ootischenia,Ootischenia,49.2916,-117.6323,1320,170.6
+Taylor,Taylor,56.159,-120.6878,1317,77.8
+Sorrento,Sorrento,50.8832,-119.4782,1309,110.3
+Youbou,Youbou,48.8562,-124.1731,1302,146.4
+Kaleden,Kaleden,49.3926,-119.5955,1186,274.9
+Salmo,Salmo,49.1942,-117.2778,1141,466.2
+Valemount,Valemount,52.8284,-119.2659,1021,197.6
+Hudson Hope,Hudson Hope,56.0316,-121.9057,1012,1.1
