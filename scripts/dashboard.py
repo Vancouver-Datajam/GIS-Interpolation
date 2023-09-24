@@ -28,91 +28,98 @@ app = dash.Dash(__name__)
 # Step 7: Define the layout of your dashboard
 app.layout = html.Div([
     
-    html.H1("Geospatial Dashboard", style={"background": "red", "padding": "8px 16px", "margin": 0}),
-    html.Div([ 
-      dcc.Dropdown(
-          id='time-period-dropdown',
-          options=[ 
-            {'label': '1961-1990', 'value': '1961-1990'},
-            {'label': '1991-2000', 'value': '1991-2000'},
-            {'label': '2001-2010', 'value': '2001-2010'},
-            {'label': '2011-2020', 'value': '2011-2020'}
-          ],
-          multi=False,
-          value="2011-2020",
-          searchable=True,
-          style={'flex': 1, 'boxShadow': '0px 4px 4px 0px #c0c0c0'}
-      ),
-      dcc.Dropdown(
-          id='target-variable-dropdown',
-          options=[
-            # max
-            {'label': 'Temp Maximum - Winter', 'value': 'Tmax_wt'},
-            {'label': 'Temp Maximum - Spring', 'value': 'Tmax_sp'},
-            {'label': 'Temp Maximum - Summer', 'value': 'Tmax_sm'},
-            {'label': 'Temp Maximum - Fall', 'value': 'Tmax_at'},
+    html.H1("British Columbia Climate Patterns", style={"padding": "24px 0px 0px 24px", 'color': '#004578', 'fontSize': 48}),
+    html.Div([
+      html.Div([ 
+        html.Label("Time Period", style={'fontWeight': 600}),
+        dcc.Dropdown(
+            id='time-period-dropdown',
+            options=[ 
+              {'label': '1961-1990', 'value': '1961-1990'},
+              {'label': '1991-2000', 'value': '1991-2000'},
+              {'label': '2001-2010', 'value': '2001-2010'},
+              {'label': '2011-2020', 'value': '2011-2020'}
+            ],
+            multi=False,
+            value="2011-2020",
+            searchable=True,
+            style={'flex': 1}
+        )
+      ], style={'flex': 1}),
+      html.Div([ 
+        html.Label("Seasonal Variable", style={'fontWeight': 600}),
+        dcc.Dropdown(
+            id='target-variable-dropdown',
+            options=[
+              # max
+              {'label': 'Temp Maximum - Winter', 'value': 'Tmax_wt'},
+              {'label': 'Temp Maximum - Spring', 'value': 'Tmax_sp'},
+              {'label': 'Temp Maximum - Summer', 'value': 'Tmax_sm'},
+              {'label': 'Temp Maximum - Fall', 'value': 'Tmax_at'},
 
-            # mins
-            {'label': 'Temp Minimum - Winter', 'value': 'Tmin_wt'},
-            {'label': 'Temp Minimum - Spring', 'value': 'Tmin_sp'},
-            {'label': 'Temp Minimum - Summer', 'value': 'Tmin_sm'},
-            {'label': 'Temp Minimum - Fall', 'value': 'Tmin_at'},
-            # average
-            {'label': 'Temp Average - Winter', 'value': 'Tave_wt'},
-            {'label': 'Temp Average - Spring', 'value': 'Tave_sp'},
-            {'label': 'Temp Average - Summer', 'value': 'Tave_sm'},
-            {'label': 'Temp Average - Fall', 'value': 'Tave_at'},
-            # # precip
-            # {'label': 'Precipitation - Winter', 'value': 'PPT_wt'},
-            # {'label': 'Precipitation - Spring', 'value': 'PPT_sp'},
-            # {'label': 'Precipitation - Summer', 'value': 'PPT_sm'},
-            # {'label': 'Precipitation - Fall', 'value': 'PPT_at'},
-          ],
-          multi=False,
-          value="Tmax_wt",
-          searchable=True,
-          style={'flex': 1, 'boxShadow': '0px 4px 4px 0px #c0c0c0'}
-      ),
-      dcc.Dropdown(
-          id='variable-dropdown',
-          options=[ 
-            {'label': 'Exponential', 'value': 'exponential'},
-            {'label': 'Spherical', 'value': 'spherical'},
-            {'label': 'Linear', 'value': 'linear'},
-            # {'label': 'Gaussian', 'value': 'Gaussian'},
-            # {'label': 'Power', 'value': 'Power'}
-          ],
-          multi=False,
-          value="exponential",
-          searchable=True,
-          style={'flex': 1, 'boxShadow': '0px 4px 4px 0px #c0c0c0'}
-      ),
-    ], style={'display': 'flex', 'gap': 24, 'margin': '24px 0px'}),
+              # mins
+              {'label': 'Temp Minimum - Winter', 'value': 'Tmin_wt'},
+              {'label': 'Temp Minimum - Spring', 'value': 'Tmin_sp'},
+              {'label': 'Temp Minimum - Summer', 'value': 'Tmin_sm'},
+              {'label': 'Temp Minimum - Fall', 'value': 'Tmin_at'},
+              # average
+              {'label': 'Temp Average - Winter', 'value': 'Tave_wt'},
+              {'label': 'Temp Average - Spring', 'value': 'Tave_sp'},
+              {'label': 'Temp Average - Summer', 'value': 'Tave_sm'},
+              {'label': 'Temp Average - Fall', 'value': 'Tave_at'},
+              # # precip
+              # {'label': 'Temp Diff', 'value': 'TD'},
+              # {'label': 'Precipitation - Spring', 'value': 'PPT_sp'},
+              # {'label': 'Precipitation - Summer', 'value': 'PPT_sm'},
+              # {'label': 'Precipitation - Fall', 'value': 'PPT_at'},
+            ],
+            multi=False,
+            value="Tmax_wt",
+            searchable=True,
+        ),
+      ], style={'flex': 1}),
+      html.Div([
+        html.Label("Variogram Model", style={'fontWeight': 600}),    
+        dcc.Dropdown(
+            id='variable-dropdown',
+            options=[ 
+              {'label': 'Exponential', 'value': 'exponential'},
+              {'label': 'Spherical', 'value': 'spherical'},
+              {'label': 'Linear', 'value': 'linear'},
+              {'label': 'Gaussian', 'value': 'gaussian'},
+              {'label': 'Power', 'value': 'power'}
+            ],
+            multi=False,
+            value="exponential",
+            searchable=True
+        )
+      ], style={'flex': 1})
+    ], style={'display': 'flex', 'gap': 24, 'margin': '24px', 'padding': 16, 'background': '#deecf9', 'boxShadow': '0px 4px 4px 0px #c0c0c0'}),
 
     html.Div([
       html.Div([    
         html.Div([    
           # Geospatial map
-          html.H3("Temperature", style={'textAlign': 'center', 'margin': '8px 0px', 'background': '#fff'}),
+          html.H3("Temperature", style={'textAlign': 'center', 'margin': '8px 0px', 'background': '#fff', 'fontWeight': 'semibold'}),
           dcc.Graph(
               id='geo-map',
-              style={'flex': 1}
+              style={'width': '100%'}
           )
         ], style={'border': '1px solid #eaeaea', 'flex': 1, 'boxShadow': '0px 4px 6px 0px #c0c0c0', 'background': '#fff'}),
         html.Div([    
           # Geospatial map
-          html.H3("Precipitation", style={'textAlign': 'center', 'margin': '8px 0px', 'background': '#fff'}),
+          html.H3("Precipitation", style={'textAlign': 'center', 'margin': '8px 0px', 'background': '#fff', 'fontWeight': 'semibold'}),
           dcc.Graph(
               id='geo-map-2',
-              style={'flex': 1}
+              style={'width': '100%'}
           )
         ], style={'border': '1px solid #eaeaea', 'flex': 1, 'boxShadow': '0px 4px 6px 0px #c0c0c0', 'background': '#fff'})
       ], style={'display': 'flex', 'gap': 24, 'width': '100%'})
-    ])
+    ], style={'padding': '0px 24px'})
 
 
     
-], style={'minHeight': '100vh', 'margin': -8, 'padding': 0, 'fontFamily': 'Arial'})
+], style={'minHeight': '100vh', 'margin': '-8px', 'padding': 0, 'fontFamily': 'Arial', 'background-color': '#fff', 'background-image': 'repeating-radial-gradient( circle at 0 0, transparent 0, #ffffff 14px ), repeating-linear-gradient( #0078d410, #0078d410 )', 'marginTop': '-20px'})
 
 
 # Step 8: Create callback function to update the map
@@ -221,22 +228,39 @@ def update_map(variogram, time_period, target_variable):
                       #.to_crs("EPSG:4326")
                       )
     
+    range_color=[-20,20]
+
+    # if "wt" in target_variable:
+    #     print("Its Winter")
+    #     range_color=[-20,5]
+    # if "sp" in target_variable:
+    #     print("Its Spring")
+    #     range_color=[-10,20]
+    # if "sm" in target_variable:
+    #     print("Its Summer")
+    #     range_color=[0,30]
+    # if "at" in target_variable:
+    #     print("Its Fall")
+    #     range_color=[-5,20]
+    
     temp_labels = {target_variable: 'Temp (C)'}
-    precip_labels = {precip_variable: 'mm (??)'}
+    precip_labels = {precip_variable: 'Precip (MM)'}
     temp_fig = px.choropleth_mapbox(tave_model, geojson=tave_model.geometry, locations=tave_model.index,
-                              color=target_variable, color_continuous_scale="turbo", opacity=0.5,
+                              color=target_variable, color_continuous_scale="turbo", opacity=0.3,
                               center={"lat": train_data.Latitude.mean(), "lon": train_data.Longitude.mean()}, zoom=3.5,
-                              mapbox_style="carto-positron", range_color=[-20,30], labels=temp_labels)
+                              mapbox_style="carto-positron", range_color=range_color, labels=temp_labels)
     temp_fig.update_layout(margin=dict(l=0, r=0, t=30, b=10))
     temp_fig.update_traces(marker_line_width=1)
 
     precip_fig = px.choropleth_mapbox(tave_model_precip, geojson=tave_model.geometry, locations=tave_model.index,
-                              color=precip_variable, color_continuous_scale="turbo", opacity=0.5,
+                              color=precip_variable, color_continuous_scale="turbo", opacity=0.3,
                               center={"lat": train_data.Latitude.mean(), "lon": train_data.Longitude.mean()}, zoom=3.5,
                               mapbox_style="carto-positron", range_color=[50,1750], labels=precip_labels)
     precip_fig.update_layout(margin=dict(l=0, r=0, t=30, b=10))
     precip_fig.update_traces(marker_line_width=1)
     return (temp_fig,precip_fig)
+
+
 
 # Step 9: Run the app
 if __name__ == '__main__':
